@@ -95,6 +95,11 @@ class Helper_Unittest {
 		file_put_contents(DOCROOT.$save_path,$txt);
 	}
 
+	public static function save_diff($prefix,$my_text,$their_text){
+		self::save_result($prefix.'_their.txt',$their_text);
+		self::save_result($prefix.'_mine.txt',$my_text);
+	}
+
 	public static function extract_tag($tag,$html,$isIncludeTag=TRUE)
 	{
 		$pattern = '/(?:<'.$tag.'[^>]*>)(.*)<\/'.$tag.'>/isU';
