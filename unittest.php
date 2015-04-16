@@ -13,11 +13,6 @@ class Helper_Unittest {
 			parse_str($_SERVER['QUERY_STRING'],$_REQUEST);
 			$_GET = $_REQUEST;
 		}
-
-
-//		$_SERVER['PHP_SELF']= '/index.php'.$uri;///hk_en/2015';
-//		$_SERVER['REDIRECT_URL']= $uri;//'/hk_en/2015';
-//		$_SERVER['PATH_TRANSLATED']= 'redirect:\index.php\hk_en\2015\2015';
 	}
 
 	public static function make_post_vars($name,$value){
@@ -128,11 +123,5 @@ class Helper_Unittest {
 
 	public static function trim_absolute_path(&$str){
 		return preg_replace('/"http:\/\/[^\/]*\//','"ABSOLUTE_PATH/',$str);
-	}
-
-	public static function remove_node(DOMDocument &$dom, $id)
-	{
-		$element = $dom->getElementById($id);
-		$element->parentNode->removeChild($element);
 	}
 }
