@@ -83,6 +83,7 @@ class Helper_Unittest {
 
 	public static function save_result($file,$txt)
 	{
+		/*add line break for easier reading*/
 		$txt = str_replace('><','>'.PHP_EOL.'<',$txt);
 		$save_path = '../phpunit/result/'.$file;
 
