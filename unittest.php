@@ -152,4 +152,9 @@ class Helper_Unittest {
 		}
 		rmdir($dirPath);
 	}
+
+	public static function has_error_message(&$str){
+		$is_error = preg_match('/Fatal error/i',$str)+preg_match('/Undefined/i',$str);
+		return $is_error > 0;
+	}
 }
